@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 18rem; margin: 15px;">
     <img src="<%= `/images/${post.image}` %>" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">
@@ -7,7 +7,7 @@
         <p class="card-text">
             <%= post.description %>
         </p>
-        <a href="#" class="btn btn-primary">
+        <a href="/post/<%=post.id%>" class="btn btn-primary">
             Ler mais
         </a>
     </div>
