@@ -27,10 +27,10 @@ router.get('/all', function(req, res, next) {
 router.get('/project/:projectId' ,function(req, res, next){
   var projectId = req.params.projectId;
 
-  var projects = projectService.getProjects();
-  var project = projects.filter((project) => project.id == projectId)[0];
+  var project = projectService.getProjects();
+  var projects = project.filter((projects) => projects.id == projectId)[0];
 
-  res.render('project', { title: project.title, project: project});
+  res.render('project', { title: projects.title, projects: projects});
 });
 
 
