@@ -5,43 +5,44 @@ var getNoticias = function(){
             title: 'noticia 1',
             image: 'noticia.jpg',
             description: 'Minha primeira noticia',
-            link: 'teste111111'   
+            link: 'http://www.google.com'  
         },
         {
             id: 2,
             title: 'noticia 2',
             image: 'noticia.jpg',
             description: 'Minha segunda noticia',
-            link: 'teste22222'  
+            link: 'http://www.link2.com'  
         },
         {
             id: 3,
             title: 'noticia 3',
             image: 'noticia.jpg',
             description: 'Minha terceita noticia',
-            link: 'teste33333333'  
+            link: 'http://www.facebook.com'
         },
         {
             id: 4,
             title: 'noticia 4',
             image: 'noticia.jpg',
             description: 'Minha quarta noticia',
-            link: 'teste44444'  
+            link: 'http://www.pudim.com'
         },
         {
             id: 5,
             title: 'noticia 5',
             image: 'noticia.jpg',
             description: 'Minha quinta noticia',
-            link: 'teste555555'  
+            link: 'http://www.jesus.com' 
         },
         {
             id: 6,
             title: 'noticia 6',
             image: 'noticia.jpg',
             description: 'Minha sexta noticia',
-            link: 'teste6'  
+            link: 'http://www.g1.com'
         }
+        
     ];
     return noticias;
 }

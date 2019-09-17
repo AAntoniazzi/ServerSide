@@ -44,10 +44,10 @@ router.get('/project', function(req, res, next) {
 router.get('/noticia/:noticiaId' ,function(req, res, next){
   var noticiaId = req.params.noticiaId;
 
-  var noticia = noticiaService.getNoticias();
-  var noticias = noticia.filter((noticias) => noticias.id == noticiaId)[0];
+  var noticias = noticiaService.getNoticias();
+  var noticia = noticias.filter((noticia) => noticia.id == noticiaId)[0];
 
-  res.render('noticia', { title: noticias.title, noticias: noticias});
+  res.render('noticia', { title: noticia.title, noticia: noticia});
 });
 
 
