@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var postService = require('../services/postsService');
 var projectService = require('../services/projectsService');
+var noticiaService = require('../services/noticiasService');
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var posts = postService.getPosts().slice(0, 3);
@@ -38,5 +40,21 @@ router.get('/project', function(req, res, next) {
   var projects = projectService.getProjects();
   res.render('projects', { title: 'Blog', projects: projects });
 });
+
+router.get('/noticia/:noticiaId' ,function(req, res, next){
+  var noticiaId = req.params.noticiaId;
+
+  var noticia = noticiaService.getNoticias();
+  var noticias = noticia.filter((noticias) => noticias.id == noticiaId)[0];
+
+  res.render('noticia', { title: noticias.title, noticias: noticias});
+});
+
+
+router.get('/noticia', function(req, res, next) {
+  var noticias = noticiaService.getNoticias();
+  res.render('noticias', { title: 'Blog', noticias: noticias });
+});
+
 
 module.exports = router;

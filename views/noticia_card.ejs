@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem; margin: 15px;">
+    <img src="<%= `/images/${noticia.image}` %>" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">
+            <%= noticia.title %>
+        </h5>
+        <p class="card-text">
+            <%= noticia.description %>
+        </p>
+        <a href="/noticia/<%=noticia.id%>" class="btn btn-primary">
+            Ler mais
+        </a>
+    </div>
+</div>

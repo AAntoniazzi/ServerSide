@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('imports'); -%>
+    
+  </head>
+  <body>
+    <%- include('navbar'); -%>    
+    <div class="container">
+      <div class = "row justify-content-center">
+          <% noticias.forEach((noticia)=> { %>
+            <%- include('noticia_card', {noticia:noticia}); %>
+         <% }); %>
+      </div>
+    </div>
+  </body>
+</html>
