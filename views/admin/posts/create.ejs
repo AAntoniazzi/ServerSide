@@ -25,30 +25,30 @@
     <div class="row">
       <h1>Novo Post</h1>
     </div>
-    <form>
+    <form action="create" method="POST">
       <div class="row">
 
-        <div class="col-md-6">
+        <div class="col-md-12">
           <label for="exampleFormControlInput1">Titulo</label>
-          <input type="form-control" class="form-control" id="exampleFormControlInput1">
+          <input type="form-control" name= "title" class="form-control" id="exampleFormControlInput1">
         </div>
 
         <div class="col-md-6">
           <label for="exampleFormControlInput2">Imagem</label>
-          <input type="form-control" class="form-control" id="exampleFormControlInput2">
+          <input type="form-control" name= "image" class="form-control" id="exampleFormControlInput2">
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12">
           <label for="exampleFormControlTextarea1">Descrição</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-12">
           <label for="exampleFormControlTextarea2">Corpo</label>
-          <textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+          <textarea class="form-control" name="postBody" id="exampleFormControlTextarea2" rows="3"></textarea>
         </div>
 
-        <div>
+        <div class="row mb-2">
           <button class="btn btn-primary">
             Incluir
           </button>
