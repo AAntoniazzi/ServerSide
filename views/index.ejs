@@ -9,6 +9,9 @@
     <%- include('navbar'); -%>    
     <div class="container">
       <div class = "row justify-content-center">
+        <div class="row">
+            <a class="nav-item nav-link" href="/admin/posts">Admin</a>
+        </div>
           <% posts.forEach((post)=> { %>
             <%- include('post_card', {post:post}); %>
          <% }); %>
