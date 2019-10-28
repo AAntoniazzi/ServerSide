@@ -9,7 +9,26 @@
       <a class="nav-item nav-link" href="/all">Posts</a>
       <a class="nav-item nav-link" href="/project">Projetos</a>
       <a class="nav-item nav-link" href="/noticia">Noticias</a>
-      <!-- <a class="nav-item nav-link" href="/admin/posts">Admin</a> -->
+      <a class="nav-item nav-link" href="/admin/posts">Admin</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="/admin/posts">Posts</a>
+      </div>
+        
+      <% if (locals.loggedUser) { %>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink">
+              <%= locals.loggedUser.email %>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/auth/logout">Sair</a>
+            </div>
+          </li>
+        </ul>
+      <% } %>
+
+        </div>
+      </div>
     </div>
   </div>
 </nav>

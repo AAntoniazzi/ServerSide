@@ -30,4 +30,19 @@ router.post('/login', function(req, res, next) {
     res.render('login', {msg: 'Email e senha incorretos'});
 });
 
+router.get('/logout', function(req, res, next) {
+    var loginToken = req.cookies['loginToken'];
+
+    if (req.session.authentucatedUsers) {
+        var authentucatedUsers = req.session.authentucatedUsers;
+        var user = authentucatedUsers.find(u => u.loginToken === loginToken);
+
+        if (user) {
+            authentucatedUsers.splice(authentucatedUsers.findIndex(u => u.loginToken === loginToken));
+            res.clearCookie("loginToken");
+        }
+    }
+    res.redirect('/');
+});
+
 module.exports = router;
